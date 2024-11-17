@@ -73,7 +73,7 @@ def test_update_book(client):
     assert data["data"]["title"] == "Updated Title"
     assert data["data"]["year"] == 2023
 
-    # Test updating a non-existent book
+
     response = client.put("/api/books/999", json=update_data) 
     assert response.status_code == 404
     data = response.get_json()
