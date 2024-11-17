@@ -1,0 +1,9 @@
+curl http://127.0.0.1:5000/api/books
+
+curl -v http://127.0.0.1:5000/api/books/1
+
+curl.exe -X POST http://127.0.0.1:5000/api/books -H "Content-Type: application/json" -d "{\"title\": \"Don Quixote\", \"author\": \"Miguel de Cervantes\", \"year\": 1605}"
+
+curl.exe -X PUT http://127.0.0.1:5000/api/books/1 \ -H "Content-Type: application/json" \ -d "{\"title\": \"Pride and Prejudice\", \"author\": \"Jane Austen\", \"year\": 1813}"
+
+curl -X DELETE http://127.0.0.1:5000/api/books/2
