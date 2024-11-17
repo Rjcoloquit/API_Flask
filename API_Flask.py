@@ -73,7 +73,22 @@ def create_book():
         "year": data['year'],
     }
     
+    books.append(new_book)
 
+    return jsonify(
+        {
+            "success": True,
+            "data": new_book,
+        }
+    ), HTTPStatus.CREATED
+    
+@app.route("/api/books/<int:book_id>", methods=["PUT"])
+def update_book(book_id):
+    pass
+
+@app.route("/api/books/<int:book_id>", methods=["DELETE"])
+def delete_book(book_id):
+    pass
 
 @app.errorhandler(404)
 def not_found(error):
