@@ -49,7 +49,6 @@ def test_create_book(client):
     assert data["success"] is True
     assert data["data"]["title"] == "New Book"
 
-    # Verify the book count
     response = client.get("/api/books")
     assert len(response.get_json()["data"]) == 3
 
